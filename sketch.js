@@ -26,11 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         alert("Invalid size. Please enter a positive number.");
       }
+      
+      while (newSize > 200) {
+        alert("enter below 200");
+        newSize = parseInt(prompt("Enter new grid size (for example 16 for 16x16):"));
+        createGrid(newSize);
+      }
     }
   
     button.addEventListener("click", resetGrid);
   
-    // Create initial 16x16 grid
     createGrid(16);
   });
   
